@@ -1,6 +1,7 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Image } from "react-native";
 import PropTypes from "prop-types";
+import style from "../UserStory/style";
  
 const UserProfileImage=(props)=>{
     return(
