@@ -7,15 +7,11 @@ import Title from './component/Title/title.js';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import globalstyle from './assets/styles/globalstyle';
+import style from './assets/styles/globalstyle';
 const App=()=>{
   return(
     <SafeAreaView>
-    <View style={{marginLeft:30, 
-    marginRight:17, 
-    marginTop:30, 
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:"space-between"}}>
+    <View style={style.header}>
     <Title title={'Let’s Explore '}/>
     <TouchableOpacity style={{backgroundColor:'#f5f7faf4', padding:14, borderRadius:100}}>
     <FontAwesomeIcon icon={faEnvelope} color={'#898DAE'}/>
