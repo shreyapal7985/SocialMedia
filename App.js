@@ -1,6 +1,6 @@
 /*fontWeight is not working on android when we are applying fontFamily
 Ways of applying fontFamily ---1fontFamily:'Inter_18pt-Black',  */
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getFontFamily } from './assets/fonts/helper';
 import Title from './component/Title/title.js';
@@ -8,7 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import globalstyle from './assets/styles/globalstyle';
 import style from './assets/styles/globalstyle';
-import { FlatList } from 'react-native/types_generated/index';
+
+import UserStory from './component/UserStory/UserStory';
 
 const App = () => {
   const stories = [
@@ -75,7 +76,12 @@ const App = () => {
 
       //USER STORY SECTION BEGIN
 <View style={style.userStoryContainer}>
-<FlatList/>
+<FlatList 
+showsHorizontalScrollIndicator={true}
+horizontal={true} 
+  data={stories}
+  renderItem={({item})=><UserStory firstName={item.firstName} profile={item.profile}/>}
+/>
 </View>
 
     </SafeAreaView>

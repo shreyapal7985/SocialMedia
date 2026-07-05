@@ -1,7 +1,13 @@
-import {Text, View} from 'react-native'
+import {Text, View, Image} from 'react-native'
 import PropTypes from 'prop-types';
- const UserStory=()=>{
-    return null
+
+ const UserStory=(props)=>{
+    return (
+        <View>
+            <Image source={props.profile}/>
+            <Text>{props.firstName}</Text>
+        </View>
+    )
 
  }
 
