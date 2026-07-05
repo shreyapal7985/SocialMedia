@@ -14,7 +14,10 @@ const App=()=>{
     <View style={style.header}>
     <Title title={'Let’s Explore '}/>
     <TouchableOpacity style={style.message}>
-    <FontAwesomeIcon icon={faEnvelope} color={'#898DAE'}/>
+    <FontAwesomeIcon icon={faEnvelope} size={20} color={'#898DAE'}/>
+    <View style={style.messageContainerNumber}>
+      <Text>2</Text>
+    </View>
     </TouchableOpacity>
     </View>
     </SafeAreaView>

@@ -12,6 +12,14 @@ message:{
     backgroundColor:'#f5f7faf4', 
     padding:14, 
     borderRadius:100
+},
+messageContainerNumber:{
+    backgroundColor:'#F35BAC',
+    justifyContent:'center',
+    flexDirection:'row'
+},
+messageNumber:{
+    
 }
 })
  export default style;
