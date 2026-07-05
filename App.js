@@ -3,11 +3,11 @@ Ways of applying fontFamily ---1fontFamily:'Inter_18pt-Black',  */
 import {Text,View} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {getFontFamily} from './assets/fonts/helper';
-import Title from './title.js'
+import Title from './component/Title/title.js'
 const App=()=>{
   return(
     <SafeAreaView>
-    <Title title={'Lets Explore'}/>
+    <Title title={'Let’s Explore '}/>
     </SafeAreaView>
 
   )
