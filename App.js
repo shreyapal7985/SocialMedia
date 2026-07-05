@@ -6,6 +6,7 @@ import {getFontFamily} from './assets/fonts/helper';
 import Title from './component/Title/title.js';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import globalstyle from './assets/styles/globalstyle';
 const App=()=>{
   return(
     <SafeAreaView>
