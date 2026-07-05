@@ -13,7 +13,7 @@ const App=()=>{
     <SafeAreaView>
     <View style={style.header}>
     <Title title={'Let’s Explore '}/>
-    <TouchableOpacity style={{backgroundColor:'#f5f7faf4', padding:14, borderRadius:100}}>
+    <TouchableOpacity style={style.message}>
     <FontAwesomeIcon icon={faEnvelope} color={'#898DAE'}/>
     </TouchableOpacity>
     </View>

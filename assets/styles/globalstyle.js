@@ -7,6 +7,11 @@ header:{
     flexDirection:'row',
     alignItems:'center',
     justifyContent:"space-between"
+},
+message:{
+    backgroundColor:'#f5f7faf4', 
+    padding:14, 
+    borderRadius:100
 }
 })
  export default style;
