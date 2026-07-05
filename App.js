@@ -77,7 +77,7 @@ const App = () => {
       //USER STORY SECTION BEGIN
 <View style={style.userStoryContainer}>
 <FlatList 
-showsHorizontalScrollIndicator={true}
+showsHorizontalScrollIndicator={false}
 horizontal={true} 
   data={stories}
   renderItem={({item})=><UserStory firstName={item.firstName} profile={item.profile}/>}
