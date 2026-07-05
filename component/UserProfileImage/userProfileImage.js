@@ -1,17 +1,18 @@
 import React from "react";
 import { View, Image } from "react-native";
 import PropTypes from "prop-types";
-import style from "../UserStory/style";
+import style from "./style";
  
 const UserProfileImage=(props)=>{
     return(
-        <View style={style.userImageContainer}>
-            <Image source={props.profile} style={style.image}/>
+        <View style={[style.userImageContainer, {borderRadius:props.imageDimensions}]}>
+            <Image source={props.profile} style={{width:props.imageDimensions, height:props.imageDimensions}}/>
             </View>
     )
 }
 
 UserProfileImage.prototype={
-    profile:PropTypes.any.isRequired
+    profile:PropTypes.any.isRequired,
+    imageDimensions:PropTypes.number.isRequired
 }
 export default UserProfileImage;
