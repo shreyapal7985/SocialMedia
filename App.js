@@ -6,9 +6,9 @@ import {getFontFamily} from './assets/fonts/helper';
 const App=()=>{
   return(
     <SafeAreaView>
-      <Text style={{fontSize:50,fontFamily:getFontFamily( 'Inter', '200')}}>hello world</Text>
+      <Text style={{fontSize:50,fontFamily:getFontFamily( 'Inter', '600')}}>hello world</Text>
       
-      <Text style={{fontSize:50,fontFamily:getFontFamily('Inter', '500')}}>hello world</Text>
+      <Text style={{fontSize:50,fontFamily:getFontFamily('Inter', '500')}}>helloworld</Text>
     </SafeAreaView>
 
   )
