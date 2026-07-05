@@ -16,7 +16,7 @@ const App=()=>{
     <TouchableOpacity style={style.message}>
     <FontAwesomeIcon icon={faEnvelope} size={20} color={'#898DAE'}/>
     <View style={style.messageContainerNumber}>
-      <Text>2</Text>
+      <Text style={style.messageNumber}>2</Text>
     </View>
     </TouchableOpacity>
     </View>

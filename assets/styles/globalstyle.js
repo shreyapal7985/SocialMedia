@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { getFontFamily } from "../fonts/helper";
 const style=StyleSheet.create({
 header:{
     marginLeft:30, 
@@ -16,10 +17,19 @@ message:{
 messageContainerNumber:{
     backgroundColor:'#F35BAC',
     justifyContent:'center',
-    flexDirection:'row'
+    flexDirection:'row',
+    height:10,
+    width:10,
+    borderRadius:10,
+    position:'absolute',
+    right:10,
+    top:12
+
 },
 messageNumber:{
-    
+    color:'#FFFFFF',
+    fontFamily:getFontFamily('Inter','600'),
+    fontSize:6
 }
 })
  export default style;
