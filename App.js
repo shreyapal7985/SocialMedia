@@ -8,57 +8,60 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import globalstyle from './assets/styles/globalstyle';
 import style from './assets/styles/globalstyle';
+import { FlatList } from 'react-native/types_generated/index';
 
 const App = () => {
   const stories = [
     {
-      name: 'angel',
+      firstName: 'angel',
       id: 1,
       profile: require('./assets/images/default_profile.png')
     },
     {
-      name: 'angelina',
+      firstName: 'angelina',
       id: 2,
       profile: require('./assets/images/default_profile.png')
     },
     {
-      name: 'lolo',
+      firstName: 'lolo',
       id: 3,
       profile: require('./assets/images/default_profile.png')
     }, 
     {
-      name: 'polo',
+      firstName: 'polo',
       id: 4,
       profile: require('./assets/images/default_profile.png')
     },
     {
-      name: 'tokya',
+      firstName: 'tokya',
       id: 5,
       profile: require('./assets/images/default_profile.png')
-    },
+    },  
     {
-      name: 'lila',
+      firstName: 'lila',
       id: 6,
       profile: require('./assets/images/default_profile.png')
     },
     {
-      name: 'ana',
+      firstName: 'ana',
       id: 7,
       profile: require('./assets/images/default_profile.png')
     }, 
     {
-      name: 'nani',
+      firstName: 'nani',
       id: 8,
       profile: require('./assets/images/default_profile.png')
     },
     {
-      name: 'gigi',
+      firstName: 'gigi',
       id: 9,
       profile: require('./assets/images/default_profile.png')
     },
   ]
   return (
     <SafeAreaView>
+
+    //HEADER SECTION BEGIN
       <View style={style.header}>
         <Title title={'Let’s Explore '} />
         <TouchableOpacity style={style.message}>
@@ -68,6 +71,13 @@ const App = () => {
           </View>
         </TouchableOpacity>
       </View>
+      //HEADER SECTION END
+
+      //USER STORY SECTION BEGIN
+<View style={style.userStoryContainer}>
+<FlatList/>
+</View>
+
     </SafeAreaView>
 
   )

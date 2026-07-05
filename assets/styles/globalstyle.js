@@ -30,6 +30,10 @@ messageNumber:{
     color:'#FFFFFF',
     fontFamily:getFontFamily('Inter','600'),
     fontSize:6
+},
+userStoryContainer:{
+    marginTop:20,
+    marginHorizontal:24
 }
 })
  export default style;
