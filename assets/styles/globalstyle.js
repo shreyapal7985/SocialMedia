@@ -35,6 +35,8 @@ userStoryContainer:{
     marginTop:20,
     marginHorizontal:24
 },
-
+userPostContainer:{
+    marginHorizontal:24
+}
 })
  export default style;

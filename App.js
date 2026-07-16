@@ -127,7 +127,7 @@ const App = () => {
   const [isLoadingUserStories,setIsLoadingUserStories]=useState(false)
 
   //All for posts infinite scrolling
-  const userPostsPageSize=4;
+  const userPostsPageSize=2;
   const [userPostsCurrentPage, setUserCurrentPostsPage]=useState(1);
   const [userPostsRenderData, setUserPostsRenderData]=useState([]);
   const [isLoadingUserPosts,setIsLoadingUserPosts]=useState(false)
@@ -150,11 +150,22 @@ const App = () => {
     const getInitialData=pagination(stories,1,userStoryPageSize)
     setUserStoriesRenderData(getInitialData)
     setIsLoadingUserStories(false)
+
+    
+    setIsLoadingUserPosts(true)
+    const getInitialDataPost=pagination(posts,1,userPostsPageSize)
+    setUserPostsRenderData(getInitialDataPost)
+    setIsLoadingUserPosts(false)
   },[])
 
   return (
     <SafeAreaView>
 
+<View>
+/*inside the flastlist of post we stored the content of userStories using the ListHeaderComponent so the content of userStories not fixed on top bar of app during scrolling the post data (so data can take whole screen during Post flatlist scrolling)*/
+  <FlatList
+  ListHeaderComponent={<>
+    
     //HEADER SECTION BEGIN
       <View style={style.header}>
         <Title title={'Let’s Explore '} />
@@ -191,11 +202,29 @@ horizontal={true}
   key={item.id}
   firstName={item.firstName} profile={item.profile}/>}
 />
+</View>
+  </>}
+    keyExtractor={(item) => item.id.toString()}
+  onEndReachedThreshold={0.5}
+  onEndReached={()=>{
+    if(isLoadingUserPosts)
+  {
+    return;
+  }
+  setIsLoadingUserPosts(true);
+  const nextPage=userPostsCurrentPage+1
+  const contentToAppend=pagination(posts,nextPage,userPostsPageSize)
+  if(contentToAppend.length>0){
+    setUserCurrentPostsPage(nextPage);
+setUserPostsRenderData(prev=>[...prev,...contentToAppend])
+  }
+setIsLoadingUserPosts(false)
+}}
 
-<View>
-  <FlatList
-    data={posts}
-    renderItem={({item})=><UserPost 
+  showsVerticalScrollIndicator={false}
+    data={userPostsRenderData}
+    renderItem={({item})=>(<View style={globalstyle.userPostContainer}><UserPost
+    
       firstName={item.firstName}
       lastName={item.lastName}
       location={item.location}
@@ -204,10 +233,9 @@ horizontal={true}
       comments={item.comments}
       bookmark={item.bookmark}
       profile={item.profile}
-    />}
+    /></View>)}
 
   />
-</View>
 </View>
 
     </SafeAreaView>
