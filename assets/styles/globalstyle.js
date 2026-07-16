@@ -34,6 +34,7 @@ messageNumber:{
 userStoryContainer:{
     marginTop:20,
     marginHorizontal:24
-}
+},
+
 })
  export default style;

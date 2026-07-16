@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
  const style=StyleSheet.create({
     userImageContainer:{
 
-bprderColor:'#F35BAC',
+borderColor:'#F35BAC',
 borderWidth:1,
 padding:3
 }

@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { getFontFamily } from "../../assets/fonts/helper";
 
-const style=StyleSheet.create({
+const styles=StyleSheet.create({
 storyContainer:{
     marginRight:20
 },
@@ -15,4 +15,4 @@ firstName:{
 })
 
 
-export default style;
+export default styles;

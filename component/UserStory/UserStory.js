@@ -1,15 +1,15 @@
 import {Text, View, Image} from 'react-native'
 import PropTypes from 'prop-types';
-import style from './style';
+import styles from './style';
 import UserProfileImage from '../UserProfileImage/userProfileImage';
 
  const UserStory=(props)=>{
     return (
-        <View style={style.storyContainer}>
+        <View style={styles.storyContainer}>
         <UserProfileImage profile={props.profile}
             imageDimensions={65}
         />
-            <Text style={style.firstName}>{props.firstName}</Text>
+            <Text style={styles.firstName}>{props.firstName}</Text>
         </View>
     )
 

@@ -10,6 +10,7 @@ import globalstyle from './assets/styles/globalstyle';
 import style from './assets/styles/globalstyle';
 
 import UserStory from './component/UserStory/UserStory';
+import UserPost from './component/UserPosts/userPost';
 import { useEffect, useState } from 'react';
 
 const App = () => {
@@ -65,6 +66,8 @@ const App = () => {
       firstName:'adam',
       lastName:'sharma',
       location:'boston, Ma',
+      image:require('./assets/images/default_post.png'),
+      profile: require('./assets/images/default_profile.png'),
       likes:1202,
       comments:120,
       bookmark:55,
@@ -74,6 +77,8 @@ const App = () => {
       firstName:'mala',
       lastName:'kali',
       location:'barely, ind',
+      image:require('./assets/images/default_post.png'),
+      profile: require('./assets/images/default_profile.png'),
       likes:120,
       comments:10,
       bookmark:5,
@@ -83,6 +88,8 @@ const App = () => {
       firstName:'advin',
       lastName:'singh',
       location:'cicago, Ma',
+      image:require('./assets/images/default_post.png'),
+      profile: require('./assets/images/default_profile.png'),
       likes:1000,
       comments:20,
       bookmark:65,
@@ -92,6 +99,8 @@ const App = () => {
       firstName:'damini',
       lastName:'mittal',
       location:'agra,ind',
+      image:require('./assets/images/default_post.png'),
+      profile: require('./assets/images/default_profile.png'),
       likes:202,
       comments:1120,
       bookmark:505,
@@ -101,6 +110,8 @@ const App = () => {
       firstName:'ladam',
       lastName:'sharma',
       location:'boston, Ma',
+      image:require('./assets/images/default_post.png'),
+      profile: require('./assets/images/default_profile.png'),
       likes:1000,
       comments:20,
       bookmark:55,
@@ -184,7 +195,16 @@ horizontal={true}
 <View>
   <FlatList
     data={posts}
-    renderItem={({item})=>{}}
+    renderItem={({item})=><UserPost 
+      firstName={item.firstName}
+      lastName={item.lastName}
+      location={item.location}
+      image={item.image}
+      likes={item.likes}
+      comments={item.comments}
+      bookmark={item.bookmark}
+      profile={item.profile}
+    />}
 
   />
 </View>
