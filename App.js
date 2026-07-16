@@ -140,7 +140,7 @@ const App = () => {
     setUserStoriesRenderData(getInitialData)
     setIsLoadingUserStories(false)
   },[])
-  
+
   return (
     <SafeAreaView>
 
@@ -180,6 +180,14 @@ horizontal={true}
   key={item.id}
   firstName={item.firstName} profile={item.profile}/>}
 />
+
+<View>
+  <FlatList
+    data={posts}
+    renderItem={({item})=>{}}
+
+  />
+</View>
 </View>
 
     </SafeAreaView>
